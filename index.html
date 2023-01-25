@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Code Quiz</title>
-</head>
-<body>
-    <header>
-        <history id="highscore"><a href="./assets/scores.html"> View Highscores </a></history>
-        <timer id="time"></timer>
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try out this multiple choice quiz to test out your HTML, CSS, and JavaScript knowledge. Answer 10 questions before the timer runs out and keep track of your highscore! </p>
-    </header>
-    <container class="container">
-        <centralize class="vertical-center">
-            <button id="start">Start Quiz</button>
-            <form class="questions-1" >
-                <p>What does the acronym CSS stand for?</p>
-                <input type="radio">1. Colors Sound Sync
-                <input type="radio">2. Computer Syntax Simulator
-                <input type="radio">3. Cascading Style Sheets
-                <input type="radio">4. Chronological Synchronous Sonogram
-                <input type="submit" value="Next">
-            </form>
-            <form class="questions-2">
-                <p>What does the acronym HTML stand for?</p>
-                <input type="radio">1. Hyper Tunnel Marker Line 
-                <input type="radio">2. Hyper Text Markup Language
-                <input type="radio">3. Hyper Terminal Meta Link 
-                <input type="radio">4. History Traversal Media Log 
-                <input type="submit" value="Next">
-            </form>
-            <form class="questions-3">
-                <p>Which HTML syntax makes text on the page bold?</p>
-                <input type="radio">1. strong
-                <input type="radio">2. bold
-                <input type="radio">3. h1 
-                <input type="radio">4. engorge
-                <input type="submit" value="Next">
-            </form>
-            <form class="questions-4">
-                <p>What is a string in JavaScript?</p>
-                <input type="radio">1. Zero or more characters written inside single or double quotes.
-                <input type="radio">2. A pimitive value created from literals.
-                <input type="radio">3. A line of code for storing and manipulating text.
-                <input type="radio">4. All of the above.
-                <input type="submit" value="Next">
-            </form>
-        </centralize>
-    </container>
 
-    <script src="./script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Code Quiz</title>
+</head>
+
+<body>
+  <div>
+    <div><a href="./assets/scores.html" id="highscore"> View Highscores </a></div>
+    <div id="time"></div>
+    <div class="container">
+      <div id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try out this multiple choice quiz to test out your HTML, CSS, and JavaScript knowledge. Answer 5 questions
+          before the timer runs out and keep track of your highscore!</p>
+        <div class="container"><button id="start" class="yellow-button">Start Quiz</button></div>
+      </div>
+      <div class="container">
+        <div id="questions" class="hide">
+          <h2 id="question"> </h2>
+          <div id="options"> </div>
+          <div id="answer-check"> </div>
+        </div>
+      </div>
+      <div>
+        <div id="score" class="hide">
+          <h2>Final Score</h2>
+          <div id="displayScore"></div>
+          <p>Input your initials: <input type="text" id="initials" max-width="3"><button
+              class="yellow-button">Submit</button></p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- <container class="container">
+        <centralize class="vertical-center"> -->
+    <!--<div style='transform: scale(0.65); position: relative; top: -100px;'>-->
+
+  </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>

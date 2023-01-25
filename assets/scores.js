@@ -1,1 +1,1 @@
-localStorage.setItem('name', 'score')
+localStorage.setItem('highscore', score:"")
