@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./scores.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./scores.css" />
     <title>Highscores</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <h1>Highscore List</h1>
-        <table class="scoretable">
-            <!-- will append scores into here -->
-        </table>
+      <h1>Highscore List</h1>
+      <div id="highscore">
+        <!-- will append scores into here -->
+      </div>
 
-        <a href="index.html">
-            <button> Start New Quiz </button>
-        </a>
-        <button class="clear"> Clear Scores </button>
+      <!-- link back to main page -->
+      <a href="../index.html" id="homepage">
+        <button>Start New Quiz</button>
+      </a>
+
+      <!-- button to clear highscore list -->
+      <div>
+        <button class="clear">Clear Scores</button>
+      </div>
     </div>
     <script src="./scores.js"></script>
-</body>
+  </body>
 </html>

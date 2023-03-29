@@ -50,22 +50,22 @@ questionsEl.classList.remove("hide")
 //start timer
 timerInterval = setInterval(setTime, 1000); 
 timer.textContent = secondsLeft + " seconds remaining";
-
+// display questions
 showQuiz();
 }
 
 function showQuiz() {
-if(questions[quizLevel]){
-  document.getElementById("question").textContent = questions[quizLevel].question
-  document.getElementById("options").innerHTML="";
-
-  for(var i=0; i<questions[quizLevel].choices.length; i++){
-    var button = document.createElement("button");
-    button.textContent = questions[quizLevel].choices[i];
-    button.onclick = answerCheck;
-    document.getElementById("options").append(button);
-  }
-  
+  if(questions[quizLevel]){
+    document.getElementById("question").textContent = questions[quizLevel].question
+    document.getElementById("options").innerHTML="";
+    
+    for(var i=0; i<questions[quizLevel].choices.length; i++){
+      var button = document.createElement("button");
+      button.textContent = questions[quizLevel].choices[i];
+      button.onclick = answerCheck;
+      document.getElementById("options").append(button);
+    }
+    
   }
 };
 
@@ -75,17 +75,21 @@ function answerCheck(event) {
   document.getElementById("answer-check").textContent = "Correct Answer: " + questions[quizLevel].answer;
   if(event.target.textContent !== questions[quizLevel].answer) {
     timer = -5;
+    var nextButton = document.createElement("button");
+    nextButton.textContent = "Next" + questions[quizLevel++].question;
+    nextButton.appendChild.textContent = "Wrong";
     console.log("wrong");
   } else {
     score++; 
+    var nextButton = document.createElement("button");
+    nextButton.textContent = "Next" + questions[quizLevel++].question;
+    nextButton.appendChild.textContent = "Correct!";
     console.log("correct");
-    setScore();
+    // setScore();
   }
 
 quizLevel++;
 showQuiz();
-  // var nextButton = document.createElement("button");
-  // nextButton.textContent = "Next" + questions[quizLevel++].question;
 
 
   // document.getElementById("answer-check").append(nextButton);
