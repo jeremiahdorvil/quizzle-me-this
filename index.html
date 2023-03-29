@@ -11,9 +11,13 @@
 </head>
 
 <body>
+  <!-- div to hold our main page -->
   <div>
+    <!-- store the high scores -->
     <div><a href="./assets/scores.html" id="highscore"> View Highscores </a></div>
+    <!-- div to show the timer -->
     <div id="time"></div>
+    <!-- div container to hold the start page for the quiz. -->
     <div class="container">
       <div id="intro">
         <h1>Coding Quiz Challenge</h1>
@@ -21,13 +25,15 @@
           before the timer runs out and keep track of your highscore!</p>
         <div class="container"><button id="start" class="yellow-button">Start Quiz</button></div>
       </div>
+      <!-- div container to hold the questions once the quiz has started. -->
       <div class="container">
         <div id="questions" class="hide">
           <h2 id="question"> </h2>
           <div id="options"> </div>
-          <div id="answer-check"> </div>
+          <div id="answer-check" class="hide"> </div>
         </div>
       </div>
+      <!-- div container to hold the end page after the quiz. -->
       <div>
         <div id="score" class="hide">
           <h2>Final Score</h2>

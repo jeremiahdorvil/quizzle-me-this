@@ -31,6 +31,7 @@ var questionsEl = document.querySelector("#questions")
 var username = document.querySelector("#initials")
 var quizLevel = 0
 var secondsLeft = 30;
+var score = 0
 var timerInterval;
 var intro = document.querySelector("#intro")
 var highscoreEl = document.querySelector("#score")
@@ -73,10 +74,12 @@ function answerCheck(event) {
   console.log(event.target);
   document.getElementById("answer-check").textContent = "Correct Answer: " + questions[quizLevel].answer;
   if(event.target.textContent !== questions[quizLevel].answer) {
-    timer
+    timer = -5;
     console.log("wrong");
   } else {
+    score++; 
     console.log("correct");
+    setScore();
   }
 
 quizLevel++;
@@ -105,6 +108,10 @@ function setTime() {
 
 //end game function
 function endGame() {
+  if (quizLevel > questions.length) {
+    clearInterval(timerInterval);
+    setScore();
+  }
 
 
 function sendMessage() {
