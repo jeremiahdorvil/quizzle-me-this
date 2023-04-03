@@ -1,3 +1,4 @@
+// This is the array of questions and multiple choice answers for the application to loop through.
 var questions = [
   {
     question: "What does the acronym CSS stand for?",
@@ -53,7 +54,7 @@ timer.textContent = secondsLeft + " seconds remaining";
 // display questions
 showQuiz();
 }
-
+// This function lets program know which question it is currently on and the corresponding answers to display.
 function showQuiz() {
   if(questions[quizLevel]){
     document.getElementById("question").textContent = questions[quizLevel].question
@@ -69,6 +70,7 @@ function showQuiz() {
   }
 };
 
+// This function is supposed to pull information on if the clicked answer is correct or not, then append that to the page.
 function answerCheck(event) {
   console.log(this);
   console.log(event.target);
@@ -88,6 +90,7 @@ function answerCheck(event) {
     // setScore();
   }
 
+// move on to the next question whether answered right or wrong.
 quizLevel++;
 showQuiz();
 
@@ -101,6 +104,7 @@ function setTime() {
     timer.textContent = secondsLeft + " seconds remaining";
 
     if(secondsLeft === 0) {
+      clearInterval();
       sendMessage();
     }
 }
